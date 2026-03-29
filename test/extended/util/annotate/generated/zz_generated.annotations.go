@@ -119,6 +119,8 @@ var Annotations = map[string]string{
 
 	"[sig-api-machinery][Feature:APIServer] TestTLSDefaults": " [Suite:openshift/conformance/parallel]",
 
+	"[sig-api-machinery][Feature:APIServer] TestTLSMinimumVersions": " [Suite:openshift/conformance/parallel]",
+
 	"[sig-api-machinery][Feature:APIServer] anonymous browsers should get a 403 from /": " [Suite:openshift/conformance/parallel]",
 
 	"[sig-api-machinery][Feature:APIServer] authenticated browser should get a 200 from /": " [Suite:openshift/conformance/parallel]",
@@ -342,6 +344,8 @@ var Annotations = map[string]string{
 	"[sig-auth][Feature:Authentication]  TestFrontProxy should succeed": " [Suite:openshift/conformance/parallel]",
 
 	"[sig-auth][Feature:BootstrapUser] The bootstrap user should successfully login with password decoded from kubeadmin secret [Disruptive]": " [Serial]",
+
+	"[sig-auth][Feature:ControlPlaneSecurity] should have privileged securityContext for control plane init and main containers": " [Suite:openshift/conformance/parallel]",
 
 	"[sig-auth][Feature:HTPasswdAuth] HTPasswd IDP should successfully configure htpasswd and be responsive [apigroup:user.openshift.io][apigroup:route.openshift.io]": " [Suite:openshift/conformance/parallel]",
 
@@ -1307,6 +1311,8 @@ var Annotations = map[string]string{
 
 	"[sig-imageregistry] Image --dry-run should not delete resources [apigroup:image.openshift.io]": " [Suite:openshift/conformance/parallel]",
 
+	"[sig-imageregistry] Image --dry-run should not update resources [apigroup:image.openshift.io]": " [Suite:openshift/conformance/parallel]",
+
 	"[sig-imageregistry] Image registry [apigroup:route.openshift.io] should redirect on blob pull [apigroup:image.openshift.io]": " [Skipped:NoOptionalCapabilities] [Suite:openshift/conformance/parallel]",
 
 	"[sig-imageregistry][Feature:ImageAppend] Image append should create images by appending them [apigroup:image.openshift.io]": " [Skipped:Disconnected] [Skipped:NoOptionalCapabilities] [Suite:openshift/conformance/parallel]",
@@ -1544,6 +1550,8 @@ var Annotations = map[string]string{
 	"[sig-network-edge][OCPFeatureGate:GatewayAPIController][Feature:Router][apigroup:gateway.networking.k8s.io] Ensure default gatewayclass is accepted": " [Suite:openshift/conformance/parallel]",
 
 	"[sig-network] Internal connectivity for TCP and UDP on ports 9000-9999 is allowed [Serial:Self]": " [Suite:openshift/conformance/parallel]",
+
+	"[sig-network] ServiceCIDR should be blocked": " [Suite:openshift/conformance/parallel]",
 
 	"[sig-network] external gateway address when using openshift ovn-kubernetes should match the address family of the pod": " [Suite:openshift/conformance/parallel]",
 
@@ -1839,9 +1847,13 @@ var Annotations = map[string]string{
 
 	"[sig-network][OCPFeatureGate:PersistentIPsForVirtualization][Feature:Layer2LiveMigration] Kubevirt Virtual Machines when using openshift ovn-kubernetes with user defined networks and persistent ips configured created using NetworkAttachmentDefinitions [Suite:openshift/network/virtualization] should keep ip [OCPFeatureGate:NetworkSegmentation] when the VMI attached to a primary UDN is migrated between nodes": "",
 
+	"[sig-network][OCPFeatureGate:PersistentIPsForVirtualization][Feature:Layer2LiveMigration] Kubevirt Virtual Machines when using openshift ovn-kubernetes with user defined networks and persistent ips configured created using NetworkAttachmentDefinitions [Suite:openshift/network/virtualization] should keep ip [OCPFeatureGate:PreconfiguredUDNAddresses] when the VM with preconfigured IP address is created when the address is already taken": "",
+
 	"[sig-network][OCPFeatureGate:PersistentIPsForVirtualization][Feature:Layer2LiveMigration] Kubevirt Virtual Machines when using openshift ovn-kubernetes with user defined networks and persistent ips configured created using NetworkAttachmentDefinitions [Suite:openshift/network/virtualization] should keep ip [OCPFeatureGate:PreconfiguredUDNAddresses] when the VM with preconfigured IP and MAC attached to a primary UDN is migrated between nodes": "",
 
 	"[sig-network][OCPFeatureGate:PersistentIPsForVirtualization][Feature:Layer2LiveMigration] Kubevirt Virtual Machines when using openshift ovn-kubernetes with user defined networks and persistent ips configured created using NetworkAttachmentDefinitions [Suite:openshift/network/virtualization] should keep ip [OCPFeatureGate:PreconfiguredUDNAddresses] when the VM with preconfigured IPs attached to a primary UDN is restarted": "",
+
+	"[sig-network][OCPFeatureGate:PersistentIPsForVirtualization][Feature:Layer2LiveMigration] Kubevirt Virtual Machines when using openshift ovn-kubernetes with user defined networks and persistent ips configured created using NetworkAttachmentDefinitions [Suite:openshift/network/virtualization] should keep ip [OCPFeatureGate:PreconfiguredUDNAddresses] when the VM with preconfigured MAC address is created when the address is already taken": "",
 
 	"[sig-network][OCPFeatureGate:PersistentIPsForVirtualization][Feature:Layer2LiveMigration] Kubevirt Virtual Machines when using openshift ovn-kubernetes with user defined networks and persistent ips configured created using NetworkAttachmentDefinitions [Suite:openshift/network/virtualization] should keep ip [OCPFeatureGate:PreconfiguredUDNAddresses] when the VM with preconfigured MAC attached to a primary UDN is restarted": "",
 
@@ -1857,9 +1869,13 @@ var Annotations = map[string]string{
 
 	"[sig-network][OCPFeatureGate:PersistentIPsForVirtualization][Feature:Layer2LiveMigration] Kubevirt Virtual Machines when using openshift ovn-kubernetes with user defined networks and persistent ips configured created using [OCPFeatureGate:NetworkSegmentation] UserDefinedNetwork [Suite:openshift/network/virtualization] should keep ip [OCPFeatureGate:NetworkSegmentation] when the VMI attached to a primary UDN is migrated between nodes": "",
 
+	"[sig-network][OCPFeatureGate:PersistentIPsForVirtualization][Feature:Layer2LiveMigration] Kubevirt Virtual Machines when using openshift ovn-kubernetes with user defined networks and persistent ips configured created using [OCPFeatureGate:NetworkSegmentation] UserDefinedNetwork [Suite:openshift/network/virtualization] should keep ip [OCPFeatureGate:PreconfiguredUDNAddresses] when the VM with preconfigured IP address is created when the address is already taken": "",
+
 	"[sig-network][OCPFeatureGate:PersistentIPsForVirtualization][Feature:Layer2LiveMigration] Kubevirt Virtual Machines when using openshift ovn-kubernetes with user defined networks and persistent ips configured created using [OCPFeatureGate:NetworkSegmentation] UserDefinedNetwork [Suite:openshift/network/virtualization] should keep ip [OCPFeatureGate:PreconfiguredUDNAddresses] when the VM with preconfigured IP and MAC attached to a primary UDN is migrated between nodes": "",
 
 	"[sig-network][OCPFeatureGate:PersistentIPsForVirtualization][Feature:Layer2LiveMigration] Kubevirt Virtual Machines when using openshift ovn-kubernetes with user defined networks and persistent ips configured created using [OCPFeatureGate:NetworkSegmentation] UserDefinedNetwork [Suite:openshift/network/virtualization] should keep ip [OCPFeatureGate:PreconfiguredUDNAddresses] when the VM with preconfigured IPs attached to a primary UDN is restarted": "",
+
+	"[sig-network][OCPFeatureGate:PersistentIPsForVirtualization][Feature:Layer2LiveMigration] Kubevirt Virtual Machines when using openshift ovn-kubernetes with user defined networks and persistent ips configured created using [OCPFeatureGate:NetworkSegmentation] UserDefinedNetwork [Suite:openshift/network/virtualization] should keep ip [OCPFeatureGate:PreconfiguredUDNAddresses] when the VM with preconfigured MAC address is created when the address is already taken": "",
 
 	"[sig-network][OCPFeatureGate:PersistentIPsForVirtualization][Feature:Layer2LiveMigration] Kubevirt Virtual Machines when using openshift ovn-kubernetes with user defined networks and persistent ips configured created using [OCPFeatureGate:NetworkSegmentation] UserDefinedNetwork [Suite:openshift/network/virtualization] should keep ip [OCPFeatureGate:PreconfiguredUDNAddresses] when the VM with preconfigured MAC attached to a primary UDN is restarted": "",
 
@@ -2084,6 +2100,12 @@ var Annotations = map[string]string{
 	"[sig-storage][Late] Metrics should report short attach times": " [Skipped:Disconnected] [Suite:openshift/conformance/parallel]",
 
 	"[sig-storage][Late] Metrics should report short mount times": " [Skipped:Disconnected] [Suite:openshift/conformance/parallel]",
+
+	"[sig-storage][OCPFeature:StorageNetworkPolicy] Storage Network Policy should ensure required NetworkPolicies exist with correct labels": " [Suite:openshift/conformance/parallel]",
+
+	"[sig-storage][OCPFeature:StorageNetworkPolicy] Storage Network Policy should verify required labels for CSI related Operators": " [Suite:openshift/conformance/parallel]",
+
+	"[sig-storage][OCPFeature:StorageNetworkPolicy] Storage Network Policy should verify required labels for CSO related Operators": " [Suite:openshift/conformance/parallel]",
 
 	"[sig-windows] Nodes should fail with invalid version annotation": " [Suite:openshift/conformance/parallel]",
 }
